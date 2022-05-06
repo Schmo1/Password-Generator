@@ -1,0 +1,32 @@
+﻿<Application x:Class="Password_Generator.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Password_Generator"
+             xmlns:viewModel="clr-namespace:Password_Generator.ViewModel"
+             xmlns:view="clr-namespace:Password_Generator.View"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Themes/MenuButtonTheme.xaml"/>
+                <ResourceDictionary Source="Themes/TopMenuButtonTheme.xaml"/>
+                <ResourceDictionary Source="Themes/TextTheme.xaml"/>
+                <ResourceDictionary Source="Themes/BorderTheme.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <DataTemplate DataType="{x:Type viewModel:HomeViewModel}">
+                <view:HomeView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:SettingsViewModel}">
+                <view:SettingsView/>
+            </DataTemplate>
+            
+            <DataTemplate DataType="{x:Type viewModel:InfoViewModel}">
+                <view:InfoView/>
+            </DataTemplate>
+        </ResourceDictionary>
+         
+    </Application.Resources>
+</Application>
+ 

@@ -1,0 +1,52 @@
+﻿<UserControl x:Class="Password_Generator.View.ToggleButton"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Password_Generator.View"
+             mc:Ignorable="d" 
+             Name="ToggleButtonWindow"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Viewbox>
+        <Grid HorizontalAlignment="Left" Height="60" VerticalAlignment="Top" Width="100">
+            <Rectangle x:Name="Back" HorizontalAlignment="Left" Height="56" 
+                       VerticalAlignment="Top" Width="96" 
+                       Margin="2,2,0,0" RadiusX="30" RadiusY="30" 
+                       MouseLeftButtonDown="Ellipse_MouseLeftButtonDown">
+                <Rectangle.Style>
+                    <Style TargetType="Rectangle">
+                        <Setter Property="Fill" Value="#65517e"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding ElementName=ToggleButtonWindow, Path=Toggled}" Value="true">
+                                <Setter Property="Fill" Value="#82be7d" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Rectangle.Style>
+            </Rectangle>
+
+            <TextBlock x:Name="txtOff" Foreground="White" Text="OFF" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10" FontSize="18" FontWeight="Bold" 
+                       MouseLeftButtonDown="Ellipse_MouseLeftButtonDown" IsEnabled="True"  />
+
+            <TextBlock x:Name="txtOn" Foreground="White" Text="ON" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10" FontSize="18" FontWeight="Bold" 
+                       MouseLeftButtonDown="Ellipse_MouseLeftButtonDown" />
+
+ 
+            <Rectangle Name="Dot2" Fill="#504373" HorizontalAlignment="Center" Height="46" Width="46" VerticalAlignment="Center"
+                       MouseLeftButtonDown="Ellipse_MouseLeftButtonDown" RadiusX="30" RadiusY="30">
+                <Rectangle.Style>
+                    <Style TargetType="Rectangle">
+                        <Setter Property="Margin" Value="-39, 0, 0, 0"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding ElementName=ToggleButtonWindow, Path=Toggled}" Value="true">
+                                <Setter Property="Margin" Value="0, 0, -39, 0" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Rectangle.Style>
+            </Rectangle>
+
+
+        </Grid>
+    </Viewbox>
+</UserControl>
