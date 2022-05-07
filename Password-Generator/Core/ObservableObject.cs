@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 
 namespace Password_Generator.Core
 {
-    public class ObservableObject : INotifyPropertyChanged
+    public abstract class ObservableObject : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 

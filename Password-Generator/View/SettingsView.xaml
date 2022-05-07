@@ -24,33 +24,33 @@
         </Grid.RowDefinitions>
         
         <StackPanel Orientation="Horizontal" Grid.Row="1">
-            <local:ToggleButton Height="30" Toggled="{Binding Path=LowerCaseLettersActiv}" />
+            <local:ToggleButton Height="30" Toggled="{Binding Path=Settings.LowerCaseLettersActive}" />
             <TextBlock Text="Lowercase letters" VerticalAlignment="Center" Margin="20,0,0,0" Style="{StaticResource textLabel}"/>
         </StackPanel>
         
         <StackPanel Orientation="Horizontal" Grid.Row="2">
-            <local:ToggleButton Height="30" Toggled="{Binding Path=UpperCaseLettersActiv}"/>
+            <local:ToggleButton Height="30" Toggled="{Binding Path=Settings.UpperCaseLettersActive}"/>
             <TextBlock Text="Uppercase letters" VerticalAlignment="Center" Margin="20,0,0,0" Style="{StaticResource textLabel}"/>
         </StackPanel>
 
         <StackPanel Orientation="Horizontal" Grid.Row="3">
-            <local:ToggleButton Height="30" Toggled="{Binding Path=NumbersActiv}"/>
+            <local:ToggleButton Height="30" Toggled="{Binding Path=Settings.NumbersActive}"/>
             <TextBlock Text="Numbers" VerticalAlignment="Center" Margin="20,0,0,0" Style="{StaticResource textLabel}"/>
         </StackPanel>
         
         <StackPanel Orientation="Horizontal" Grid.Row="4">
-            <local:ToggleButton Height="30" Toggled="{Binding Path=SpacesActiv}"/>
+            <local:ToggleButton Height="30" Toggled="{Binding Path=Settings.SpacesActive}"/>
             <TextBlock Text="Spaces" VerticalAlignment="Center" Margin="20,0,0,0" Style="{StaticResource textLabel}"/>
         </StackPanel>
 
         <StackPanel Orientation="Horizontal" Grid.Row="5">
-            <local:ToggleButton Height="30" Toggled="{Binding Path=ExclamationMarkActiv}"/>
+            <local:ToggleButton Height="30" Toggled="{Binding Path=Settings.ExclamationMarkActive}"/>
             <TextBlock Text="Exclamation mark" VerticalAlignment="Center" Margin="20,0,0,0" Style="{StaticResource textLabel}"/>
         </StackPanel>
 
         <StackPanel Orientation="Horizontal" Grid.Row="6">
-            <local:ToggleButton Height="30" Toggled="{Binding Path=SpecialLettersActiv}"/>
-            <TextBlock Text="Special letters (:;#+-_)" VerticalAlignment="Center" Margin="20,0,0,0" Style="{StaticResource textLabel}"/>
+            <local:ToggleButton Height="30" Toggled="{Binding Path=Settings.SpecialLettersActive}"/>
+            <TextBlock Text="Special letters (:;#+-_/)" VerticalAlignment="Center" Margin="20,0,0,0" Style="{StaticResource textLabel}"/>
         </StackPanel>
         
 

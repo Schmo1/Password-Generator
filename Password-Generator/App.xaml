@@ -9,7 +9,8 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Themes/MenuButtonTheme.xaml"/>
-                <ResourceDictionary Source="Themes/TopMenuButtonTheme.xaml"/>
+                <ResourceDictionary Source="Themes/HomeButtonTheme.xaml"/>
+                <ResourceDictionary Source="Themes/AboutButtonTheme.xaml"/>
                 <ResourceDictionary Source="Themes/TextTheme.xaml"/>
                 <ResourceDictionary Source="Themes/BorderTheme.xaml"/>
             </ResourceDictionary.MergedDictionaries>
@@ -22,8 +23,8 @@
                 <view:SettingsView/>
             </DataTemplate>
             
-            <DataTemplate DataType="{x:Type viewModel:InfoViewModel}">
-                <view:InfoView/>
+            <DataTemplate DataType="{x:Type viewModel:AboutViewModel}">
+                <view:AboutView/>
             </DataTemplate>
         </ResourceDictionary>
          

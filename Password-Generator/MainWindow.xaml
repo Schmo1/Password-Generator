@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:Password_Generator"
         xmlns:viewModel="clr-namespace:Password_Generator.ViewModel"
         mc:Ignorable="d"
-        Title="Password-Generator" MinWidth="490" MaxWidth="750" MinHeight="400" Height="400" Width="500" 
+        Title="Password-Generator" MinWidth="490" MaxWidth="750" MinHeight="400" Height="400" Width="520" 
         WindowStartupLocation="CenterScreen" AllowsTransparency="True"  
         Background="Transparent" WindowStyle="None">
 
@@ -55,7 +55,20 @@
             </Grid.ColumnDefinitions>
 
             <!--Main Menu-->
-            <StackPanel Width="220">
+            <Grid Width="220">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="10"/>
+                    
+                </Grid.RowDefinitions>
+                
                 <StackPanel Orientation="Horizontal" Margin="20 35 20 30" HorizontalAlignment="Left" MouseDown="MoveMain">
                     <fa:ImageAwesome Icon="Wrench" Foreground="White" Width="50"/>
                     <StackPanel>
@@ -65,7 +78,7 @@
                 </StackPanel>
 
 
-                <Button Style="{StaticResource menuButton}" Command="{Binding HomeViewCommand}">
+                <Button Style="{StaticResource menuButton}" Command="{Binding HomeViewCommand}" Grid.Row="1">
                     <Grid>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
                             <fa:ImageAwesome Icon="Home" Style="{StaticResource buttonIcon}" />
@@ -75,7 +88,7 @@
                     </Grid>
                 </Button>
 
-                <Button Style="{StaticResource menuButton}" Command="{Binding SettingsViewCommand}">
+                <Button Style="{StaticResource menuButton}" Command="{Binding SettingsViewCommand}" Grid.Row="2">
                     <Grid>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
                             <fa:ImageAwesome Icon="Cogs" Style="{StaticResource buttonIcon}" />
@@ -85,19 +98,19 @@
                     </Grid>
                 </Button>
 
-                <Button Style="{StaticResource menuButton}" Command="{Binding InfoViewCommand}">
+                <Button Style="{StaticResource menuButton}" Command="{Binding InfoViewCommand}" Grid.Row="3">
                     <Grid>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
                             <fa:ImageAwesome Icon="InfoCircle" Style="{StaticResource buttonIcon}" />
-                            <TextBlock Text="Info" Style="{StaticResource buttonText}" />
+                            <TextBlock Text="About" Style="{StaticResource buttonText}" />
                         </StackPanel>
                         <fa:ImageAwesome Icon="AngleRight" HorizontalAlignment="Right" Style="{StaticResource buttonIconExpand}" />
                     </Grid>
                 </Button>
 
-                <Separator Background="#e0e0e0" Opacity="0.5" Margin="50 15 60 15"/>
+                <Separator Background="#e0e0e0" Opacity="0.5" Margin="50 15 60 15" Grid.Row="4" />
 
-                <Button Style="{StaticResource menuButton}" Click="ButtonMinimize_Click">
+                <Button Style="{StaticResource menuButton}" Click="ButtonMinimize_Click" Grid.Row="5">
                     <Grid>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
                             <fa:ImageAwesome Icon="WindowMinimize" Style="{StaticResource buttonIcon}" />
@@ -107,7 +120,7 @@
                     </Grid>
                 </Button>
 
-                <Button Style="{StaticResource menuButton}" Click="ButtonClose_Click">
+                <Button Style="{StaticResource menuButton}" Click="ButtonClose_Click" Grid.Row="6">
                     <Grid>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
                             <fa:ImageAwesome Icon="WindowClose" Style="{StaticResource buttonIcon}" />
@@ -116,7 +129,7 @@
 
                     </Grid>
                 </Button>
-            </StackPanel>
+            </Grid>
 
 
             <ContentControl Grid.Column="1" Content="{Binding CurrentView}">

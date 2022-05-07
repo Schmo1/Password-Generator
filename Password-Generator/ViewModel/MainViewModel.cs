@@ -14,7 +14,7 @@ namespace Password_Generator.ViewModel
         //Views
         public HomeViewModel HomeVM { get; set; }
         public SettingsViewModel SettingsVM { get; set; }
-        public InfoViewModel InfoVM { get; set; }
+        public AboutViewModel InfoVM { get; set; }
 
 
         private object _currentView;
@@ -40,9 +40,9 @@ namespace Password_Generator.ViewModel
         private void CreateViewModels()
         {
             //Create Models
-            HomeVM = new HomeViewModel();
             SettingsVM = new SettingsViewModel();
-            InfoVM = new InfoViewModel();
+            HomeVM = new HomeViewModel(SettingsVM.Settings);
+            InfoVM = new AboutViewModel();
             
             //Create Commands
             HomeViewCommand = new CommandHandler(() => CurrentView = HomeVM, () => true);

@@ -18,30 +18,41 @@
 
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="147"/>
         </Grid.RowDefinitions>
 
-        <TextBox Grid.ColumnSpan="2" HorizontalAlignment="Center" MinWidth="230"
-                        Margin="0,30,0,20" Height="80" VerticalAlignment="Bottom"
-                        Text="{Binding Path=GeneratedPassword}" HorizontalContentAlignment="Center"
+        <TextBox Grid.ColumnSpan="2" Margin="30,60,30,20" Height="80" VerticalAlignment="Top" Text="{Binding Path=GeneratedPassword}" HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center" Background="#5D478B" FontSize="20">
         </TextBox>
 
 
+        <Slider Grid.Row="1" VerticalAlignment="Center" Grid.ColumnSpan="2" Margin="50,30,50,30" IsSnapToTickEnabled="False"
+                Minimum="{Binding PWLenghtMin}" Maximum="{Binding PWLenghtMax}" Value="{Binding PWLenght}" >
+            
+        </Slider>
 
-        <Button Style="{StaticResource topMenuButton}" Command="{Binding GeneratePWCommand}" Margin="20,20,0,20" Width="100" Height="100" Grid.Row="1" VerticalAlignment="Top" >
-            <StackPanel Orientation="Vertical">
-                <fa:ImageAwesome Icon="Wrench" Style="{StaticResource topMenuIcon}"/>
-                <TextBlock Text="Generate" VerticalAlignment="Center" FontSize="14" Margin="8,0,0,0"/>
-            </StackPanel>
+
+        <Button Style="{StaticResource homeButton}" Command="{Binding GeneratePWCommand}" 
+                Margin="20,20,0,20" Width="100" Height="100" Grid.Row="2" VerticalAlignment="Center" >
+            <Viewbox>
+                <StackPanel Orientation="Vertical">
+                    <fa:ImageAwesome Icon="Wrench" Style="{StaticResource homeIcon}" Height="27"/>
+                    <TextBlock Text="Generate" VerticalAlignment="Center" FontSize="10" />
+                </StackPanel>
+            </Viewbox>
         </Button>
 
-        <Button Style="{StaticResource topMenuButton}" Command="{Binding AddToClipBoardCommand}" Margin="0,20,20,20"  Width="100" Height="100" Grid.Row="1" Grid.Column="1" VerticalAlignment="Top" >
-            <StackPanel Orientation="Vertical">
-                <fa:ImageAwesome Icon="Clipboard" Style="{StaticResource topMenuIcon}"/>
-                <TextBlock Text="Add to" VerticalAlignment="Center" FontSize="14" Margin="8 0 0 0" HorizontalAlignment="Center"/>
-                <TextBlock Text="Clipboard" VerticalAlignment="Center" FontSize="14" Margin="8 0 0 0" HorizontalAlignment="Center"/>
-            </StackPanel>
+        <Button Style="{StaticResource homeButton}" Command="{Binding AddToClipBoardCommand}" 
+                Margin="0,20,20,20"  Width="100" Height="100" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" >
+            <Viewbox>
+                <StackPanel Orientation="Vertical">
+                    <fa:ImageAwesome Icon="Clipboard" Style="{StaticResource homeIcon}" Height="27"/>
+                    <TextBlock Text="Add to" VerticalAlignment="Center" FontSize="12" HorizontalAlignment="Center"/>
+                    <TextBlock Text="Clipboard" VerticalAlignment="Center" FontSize="12"  HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Viewbox>
+
         </Button>
 
 
