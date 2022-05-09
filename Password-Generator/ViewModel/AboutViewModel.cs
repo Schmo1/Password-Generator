@@ -12,14 +12,13 @@ namespace Password_Generator.ViewModel
         private const string _gitHubLink = "https://github.com/Schmo1/Password-Generator";
 
 
-
+        //Some credentials
         public string ApplicationName { get { return Application.ResourceAssembly.GetName().Name; } }
-
         public string VersionNumber { get { return "Version: " + Application.ResourceAssembly.GetName().Version.ToString(); } }
         public string GitHubLink { get { return _gitHubLink; } }
 
 
-
+        //Hyperlink button
         public ButtonActivCommand OpenGitHubCommand { get; private set; }
 
 

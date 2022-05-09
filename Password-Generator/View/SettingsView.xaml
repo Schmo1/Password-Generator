@@ -39,20 +39,19 @@
         </StackPanel>
         
         <StackPanel Orientation="Horizontal" Grid.Row="4">
-            <local:ToggleButton Height="30" Toggled="{Binding Path=Settings.SpacesActive}"/>
-            <TextBlock Text="Spaces" VerticalAlignment="Center" Margin="20,0,0,0" Style="{StaticResource textLabel}"/>
-        </StackPanel>
-
-        <StackPanel Orientation="Horizontal" Grid.Row="5">
             <local:ToggleButton Height="30" Toggled="{Binding Path=Settings.ExclamationMarkActive}"/>
             <TextBlock Text="Exclamation mark" VerticalAlignment="Center" Margin="20,0,0,0" Style="{StaticResource textLabel}"/>
         </StackPanel>
 
-        <StackPanel Orientation="Horizontal" Grid.Row="6">
+        <StackPanel Orientation="Horizontal" Grid.Row="5">
             <local:ToggleButton Height="30" Toggled="{Binding Path=Settings.SpecialLettersActive}"/>
             <TextBlock Text="Special letters (:;#+-_/)" VerticalAlignment="Center" Margin="20,0,0,0" Style="{StaticResource textLabel}"/>
         </StackPanel>
-        
+
+        <StackPanel Orientation="Horizontal" Grid.Row="6">
+            <local:ToggleButton Height="30" Toggled="{Binding Path=Settings.SpacesActive}"/>
+            <TextBlock Text="Spaces" VerticalAlignment="Center" Margin="20,0,0,0" Style="{StaticResource textLabel}"/>
+        </StackPanel>
 
     </Grid>
 </UserControl>

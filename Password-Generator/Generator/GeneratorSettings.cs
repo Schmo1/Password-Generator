@@ -5,7 +5,7 @@ namespace Password_Generator.Generator
 
     public class GeneratorSettings
     {
-
+        //GeneratePWLengths
         private const int minPWLenght = 8;
         private const int defaultPWLenght = 20;
         private const int maxPWLenght = 50;
@@ -30,16 +30,32 @@ namespace Password_Generator.Generator
 
         public GeneratorSettings()
         {
-            if (!LowerCaseLettersActive && !UpperCaseLettersActive && !NumbersActive && !SpacesActive && !ExclamationMarkActive && !SpecialLettersActive)
-            {
-                //Set Default Values
-                LowerCaseLettersActive = UpperCaseLettersActive = NumbersActive = true;
-            }
 
+            CheckSetSettingsValid();
 
             //Check PasswordLength
             if (PasswordLength < minPWLenght || PasswordLength > maxPWLenght)
                 PasswordLength = defaultPWLenght;
+        }
+
+
+        public void CheckSetSettingsValid()
+        {
+            if (!LowerCaseLettersActive && !UpperCaseLettersActive && !NumbersActive && 
+                !SpacesActive && !ExclamationMarkActive && !SpecialLettersActive)
+            {
+                SetDefault();
+            }
+            else if (!LowerCaseLettersActive & !UpperCaseLettersActive & !
+                NumbersActive && SpacesActive & !ExclamationMarkActive & !
+                SpecialLettersActive)
+                SetDefault();
+
+        }
+        private void SetDefault()
+        {
+            //Set Default Values
+            LowerCaseLettersActive = UpperCaseLettersActive = NumbersActive = true;
         }
     }
 }

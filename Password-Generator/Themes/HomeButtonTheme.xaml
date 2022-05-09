@@ -31,6 +31,10 @@
                 <Setter Property="Background" Value="#2f2745" />
                 <Setter Property="Foreground" Value="White" />
             </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Background" Value="#7c6a93" />
+                <Setter Property="Foreground" Value="#f0f0f0" />
+            </Trigger>
         </Style.Triggers>
     </Style>
 
@@ -45,6 +49,10 @@
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
+        
+        
+        
+        
         <Style.Triggers>
             <EventTrigger RoutedEvent="MouseEnter">
                 <EventTrigger.Actions>

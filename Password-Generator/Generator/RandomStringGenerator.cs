@@ -10,7 +10,7 @@ namespace Password_Generator.Generator
         private static ListOfGeneratorLetters _letters = new ListOfGeneratorLetters();
         private Random random;
 
-        private const int maxLoops = 2000;
+        private const int maxLoops = 5000;
 
         private RandomStringGenerator()
         {
@@ -30,9 +30,8 @@ namespace Password_Generator.Generator
             if (characters == null)
                 throw new ArgumentNullException();
 
-            string randomString = string.Empty;
+            string randomString;
             char[] chars = characters.ToCharArray();
-            char randomCh = '\0';
             int loops = 0;
 
             do
@@ -41,14 +40,15 @@ namespace Password_Generator.Generator
 
                 while (randomString.Length < stringLengt && loops < maxLoops)
                 {
-                    randomCh = chars[random.Next(chars.Length)];
+                    char randomCh = chars[random.Next(chars.Length)];
                     if (!randomString.EndsWith(randomCh.ToString()))
                         randomString += randomCh;
 
+                    //Int to check if it is no principle endless loop
                     loops++;
-                }
+               }
             }while(loops < maxLoops &! ValidString(randomString, generatorSettings));
-
+             
 
             if (loops >= maxLoops)
                 return "Try Again!";

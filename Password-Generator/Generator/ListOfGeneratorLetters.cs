@@ -8,6 +8,8 @@ namespace Password_Generator.Generator
     {
         private GeneratorSettings _settings;
 
+
+        //To used strings
         public string LowerLetters { get { return "abcdefghijklmnopqrstuvwxyz"; } }
         public string UpperLetters { get { return LowerLetters.ToUpper(); } }
         public string Numbers { get { return "1234567890"; } }
@@ -20,7 +22,7 @@ namespace Password_Generator.Generator
 
         public ListOfGeneratorLetters()
         {
-            _settings = new GeneratorSettings();
+            GenerateDefaultSettings();
         }
 
         public ListOfGeneratorLetters(GeneratorSettings settings)
@@ -47,7 +49,11 @@ namespace Password_Generator.Generator
             return returnStr;
         }
 
-
+        private void GenerateDefaultSettings()
+        {
+            //New construction generates defaultsvalue
+            _settings = new GeneratorSettings();
+        }
 
 
         public List<string> GetConfiguratedStrings()
@@ -62,6 +68,9 @@ namespace Password_Generator.Generator
         private void UpdateList()
         {
             Clear();
+
+            _settings.CheckSetSettingsValid();
+
 
             if (_settings.LowerCaseLettersActive)
                 Add(LowerLetters);

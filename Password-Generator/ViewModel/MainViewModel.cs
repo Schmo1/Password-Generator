@@ -5,6 +5,7 @@ namespace Password_Generator.ViewModel
     class MainViewModel : ObservableObject
     {
 
+        //Menu Button commands
         public CommandHandler HomeViewCommand { get; set; }
         public CommandHandler SettingsViewCommand { get; set; }
         public CommandHandler InfoViewCommand { get; set; }
@@ -15,6 +16,8 @@ namespace Password_Generator.ViewModel
         public HomeViewModel HomeVM { get; set; }
         public SettingsViewModel SettingsVM { get; set; }
         public AboutViewModel InfoVM { get; set; }
+
+
 
 
         private object _currentView;
@@ -29,7 +32,7 @@ namespace Password_Generator.ViewModel
         }
 
 
-        //Konstructor
+        //Cpnstructor
         public MainViewModel()
         {
             CreateViewModels();

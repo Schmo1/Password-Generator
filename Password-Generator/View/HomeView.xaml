@@ -22,12 +22,12 @@
             <RowDefinition Height="147"/>
         </Grid.RowDefinitions>
 
-        <TextBox Grid.ColumnSpan="2" Margin="30,60,30,20" Height="80" VerticalAlignment="Top" Text="{Binding Path=GeneratedPassword}" HorizontalContentAlignment="Center"
-                        VerticalContentAlignment="Center" Background="#5D478B" FontSize="20">
+        <TextBox Grid.ColumnSpan="2" Margin="30,60,30,10" Height="auto" VerticalAlignment="Center" Text="{Binding Path=GeneratedPassword, UpdateSourceTrigger=PropertyChanged}" HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center" Background="#5D478B" FontSize="20" AcceptsReturn="True" TextWrapping="Wrap" >
         </TextBox>
 
 
-        <Slider Grid.Row="1" VerticalAlignment="Center" Grid.ColumnSpan="2" Margin="50,30,50,30" IsSnapToTickEnabled="False"
+        <Slider Grid.Row="1" VerticalAlignment="Center" Grid.ColumnSpan="2" Margin="50,20,50,20" IsSnapToTickEnabled="False"
                 Minimum="{Binding PWLenghtMin}" Maximum="{Binding PWLenghtMax}" Value="{Binding PWLenght}" >
             
         </Slider>
@@ -43,7 +43,7 @@
             </Viewbox>
         </Button>
 
-        <Button Style="{StaticResource homeButton}" Command="{Binding AddToClipBoardCommand}" 
+        <Button Style="{StaticResource homeButton}" Command="{Binding AddToClipBoardCommand}" IsEnabled="{Binding EnableAddToClipBoard}"
                 Margin="0,20,20,20"  Width="100" Height="100" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" >
             <Viewbox>
                 <StackPanel Orientation="Vertical">

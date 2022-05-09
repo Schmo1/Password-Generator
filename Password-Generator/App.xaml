@@ -8,11 +8,15 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
+                <!-- Own Themes-->
                 <ResourceDictionary Source="Themes/MenuButtonTheme.xaml"/>
                 <ResourceDictionary Source="Themes/HomeButtonTheme.xaml"/>
                 <ResourceDictionary Source="Themes/AboutButtonTheme.xaml"/>
                 <ResourceDictionary Source="Themes/TextTheme.xaml"/>
                 <ResourceDictionary Source="Themes/BorderTheme.xaml"/>
+                
+                <!-- Extern Themes-->
+                <ResourceDictionary Source="pack://application:,,,/ToastNotifications.Messages;component/Themes/Default.xaml" />
             </ResourceDictionary.MergedDictionaries>
 
             <DataTemplate DataType="{x:Type viewModel:HomeViewModel}">
