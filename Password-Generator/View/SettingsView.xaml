@@ -6,6 +6,33 @@
              xmlns:local="clr-namespace:Password_Generator.View"
              mc:Ignorable="d" 
              d:DesignHeight="350" d:DesignWidth="300">
+
+    <UserControl.Resources>
+        <Style TargetType="local:ToggleButton">
+            <Setter Property="Height" Value="30" />
+            <Style.Triggers>
+                <EventTrigger RoutedEvent="MouseEnter">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Duration="0:0:0.100" Storyboard.TargetProperty="Height" To="32" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="MouseLeave">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Duration="0:0:0.100" Storyboard.TargetProperty="Height" To="30" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
+    
     <Grid Margin="15,0,0,0">
 
         <Grid.ColumnDefinitions>
@@ -24,7 +51,7 @@
         </Grid.RowDefinitions>
         
         <StackPanel Orientation="Horizontal" Grid.Row="1">
-            <local:ToggleButton Height="30" Toggled="{Binding Path=Settings.LowerCaseLettersActive}" />
+            <local:ToggleButton Toggled="{Binding Path=Settings.LowerCaseLettersActive}" />
             <TextBlock Text="Lowercase letters" VerticalAlignment="Center" Margin="20,0,0,0" Style="{StaticResource textLabel}"/>
         </StackPanel>
         

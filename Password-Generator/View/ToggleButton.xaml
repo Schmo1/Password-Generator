@@ -7,6 +7,8 @@
              mc:Ignorable="d" 
              Name="ToggleButtonWindow"
              d:DesignHeight="450" d:DesignWidth="800">
+    
+    
     <Viewbox>
         <Grid HorizontalAlignment="Left" Height="60" VerticalAlignment="Top" Width="100">
             <Rectangle x:Name="Back" HorizontalAlignment="Left" Height="56" 
@@ -17,9 +19,19 @@
                     <Style TargetType="Rectangle">
                         <Setter Property="Fill" Value="#65517e"/>
                         <Style.Triggers>
+                            <DataTrigger Binding="{Binding ElementName=ToggleButtonWindow, Path=IsMouseOver}" Value="true">
+                                <Setter Property="Fill" Value="#806080" />
+                            </DataTrigger>
                             <DataTrigger Binding="{Binding ElementName=ToggleButtonWindow, Path=Toggled}" Value="true">
                                 <Setter Property="Fill" Value="#82be7d" />
                             </DataTrigger>
+                            <MultiDataTrigger>
+                                <MultiDataTrigger.Conditions>
+                                    <Condition Binding="{Binding ElementName=ToggleButtonWindow, Path=IsMouseOver}" Value="true" />
+                                    <Condition Binding="{Binding ElementName=ToggleButtonWindow, Path=Toggled}" Value="true" />
+                                </MultiDataTrigger.Conditions>
+                                <Setter Property="Fill" Value="#b1daa9"/>
+                            </MultiDataTrigger>
                         </Style.Triggers>
                     </Style>
                 </Rectangle.Style>
@@ -32,21 +44,29 @@
                        MouseLeftButtonDown="Ellipse_MouseLeftButtonDown" />
 
  
-            <Rectangle Name="Dot2" Fill="#504373" HorizontalAlignment="Center" Height="46" Width="46" VerticalAlignment="Center"
+            <Rectangle Name="Dot" HorizontalAlignment="Center" Height="46" Width="46" VerticalAlignment="Center"
                        MouseLeftButtonDown="Ellipse_MouseLeftButtonDown" RadiusX="30" RadiusY="30">
                 <Rectangle.Style>
                     <Style TargetType="Rectangle">
                         <Setter Property="Margin" Value="-39, 0, 0, 0"/>
+                        <Setter Property="Fill" Value="#504373"/>
                         <Style.Triggers>
+                            <DataTrigger Binding="{Binding ElementName=ToggleButtonWindow, Path=IsMouseOver}" Value="true">
+                                <Setter Property="Fill" Value="#605580" />
+                            </DataTrigger>
                             <DataTrigger Binding="{Binding ElementName=ToggleButtonWindow, Path=Toggled}" Value="true">
                                 <Setter Property="Margin" Value="0, 0, -39, 0" />
                             </DataTrigger>
                         </Style.Triggers>
                     </Style>
+                   
                 </Rectangle.Style>
             </Rectangle>
 
-
         </Grid>
+        
     </Viewbox>
+
+ 
+    
 </UserControl>

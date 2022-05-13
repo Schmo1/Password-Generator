@@ -87,6 +87,8 @@ namespace Password_Generator.ViewModel
 
             listOfGeneratorStrings = new ListOfGeneratorLetters(generatorSettings);
             _generatorSettings = generatorSettings;
+
+            GeneratePWAsync();
         }
 
 

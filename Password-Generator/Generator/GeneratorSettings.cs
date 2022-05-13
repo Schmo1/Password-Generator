@@ -1,4 +1,9 @@
-﻿
+﻿using System;
+using System.Windows;
+using ToastNotifications;
+using ToastNotifications.Messages;
+using ToastNotifications.Position;
+using ToastNotifications.Lifetime;
 
 namespace Password_Generator.Generator
 {
@@ -27,6 +32,21 @@ namespace Password_Generator.Generator
         public int MinPWLength { get => minPWLenght; }
         public int MaxPWLength { get => maxPWLenght; }
 
+        Notifier notifier = new Notifier(cfg =>
+        {
+            cfg.PositionProvider = new WindowPositionProvider(
+                parentWindow: Application.Current.MainWindow,
+                corner: Corner.TopRight,
+                offsetX: -200,
+                offsetY: -10);
+
+            cfg.LifetimeSupervisor = new TimeAndCountBasedLifetimeSupervisor(
+                notificationLifetime: TimeSpan.FromSeconds(3),
+                maximumNotificationCount: MaximumNotificationCount.FromCount(5));
+
+            cfg.Dispatcher = Application.Current.Dispatcher;
+        });
+
 
         public GeneratorSettings()
         {
@@ -54,6 +74,10 @@ namespace Password_Generator.Generator
         }
         private void SetDefault()
         {
+
+
+            notifier.ShowWarning("Changed settings to default because of wrong user settings.");
+
             //Set Default Values
             LowerCaseLettersActive = UpperCaseLettersActive = NumbersActive = true;
         }

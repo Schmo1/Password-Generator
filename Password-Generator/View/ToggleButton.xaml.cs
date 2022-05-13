@@ -27,6 +27,7 @@ namespace Password_Generator.View
         private void ToggleChangedCallback(bool value)
         {
             //...
+            
         }
 
         private static void ToggleChangedCallback(DependencyObject d, DependencyPropertyChangedEventArgs e)
@@ -41,6 +42,7 @@ namespace Password_Generator.View
             get => (bool)GetValue(ToggledProperty);
             set => SetValue(ToggledProperty, value);
         }
+
 
 
 
