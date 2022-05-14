@@ -113,7 +113,6 @@ namespace Password_Generator.ViewModel
             
             if (string.IsNullOrEmpty(GeneratedPassword))
             {   //PW is Empty
-                //toaster.Show("Generate Password!", "Textbox is Empty", ToastTypes.Error);
                 notifier.ShowError("Generate Password!");
                 return;
             }
@@ -121,7 +120,6 @@ namespace Password_Generator.ViewModel
             //Add to ClipBoard
             Clipboard.SetText(GeneratedPassword);
             notifier.ShowSuccess("Added to Clipboard");
-            //toaster.Show("Added to clipboard", string.Empty, ToastTypes.Success);
         }
 
 

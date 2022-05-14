@@ -55,8 +55,29 @@
                                 <Setter Property="Fill" Value="#605580" />
                             </DataTrigger>
                             <DataTrigger Binding="{Binding ElementName=ToggleButtonWindow, Path=Toggled}" Value="true">
-                                <Setter Property="Margin" Value="0, 0, -39, 0" />
+                                <!--<Setter Property="Margin" Value="0, 0, -39, 0" />-->
+                                <DataTrigger.EnterActions>
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="Margin" BeginTime="00:00:00">
+                                                <SplineThicknessKeyFrame KeyTime="00:00:00" Value="-39, 0,0,0" />
+                                                <SplineThicknessKeyFrame KeyTime="00:00:00.2" Value="0, 0,-39,0" />
+                                            </ThicknessAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </DataTrigger.EnterActions>
+                                <DataTrigger.ExitActions>
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="Margin" BeginTime="00:00:00">
+                                                <SplineThicknessKeyFrame KeyTime="00:00:00" Value="0, 0,-39,0" />
+                                                <SplineThicknessKeyFrame KeyTime="00:00:00.2" Value="-39, 0,0,0" />
+                                            </ThicknessAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </DataTrigger.ExitActions>
                             </DataTrigger>
+                            
                         </Style.Triggers>
                     </Style>
                    

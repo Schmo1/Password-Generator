@@ -9,13 +9,13 @@
 
     <UserControl.Resources>
         <Style TargetType="local:ToggleButton">
-            <Setter Property="Height" Value="30" />
+            <Setter Property="Height" Value="33" />
             <Style.Triggers>
                 <EventTrigger RoutedEvent="MouseEnter">
                     <EventTrigger.Actions>
                         <BeginStoryboard>
                             <Storyboard>
-                                <DoubleAnimation Duration="0:0:0.100" Storyboard.TargetProperty="Height" To="32" />
+                                <DoubleAnimation Duration="0:0:0.100" Storyboard.TargetProperty="Height" To="35" />
                             </Storyboard>
                         </BeginStoryboard>
                     </EventTrigger.Actions>
@@ -24,7 +24,7 @@
                     <EventTrigger.Actions>
                         <BeginStoryboard>
                             <Storyboard>
-                                <DoubleAnimation Duration="0:0:0.100" Storyboard.TargetProperty="Height" To="30" />
+                                <DoubleAnimation Duration="0:0:0.100" Storyboard.TargetProperty="Height" />
                             </Storyboard>
                         </BeginStoryboard>
                     </EventTrigger.Actions>
@@ -36,6 +36,7 @@
     <Grid Margin="15,0,0,0">
 
         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="60" MaxWidth="60"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
@@ -50,35 +51,31 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         
-        <StackPanel Orientation="Horizontal" Grid.Row="1">
-            <local:ToggleButton Toggled="{Binding Path=Settings.LowerCaseLettersActive}" />
-            <TextBlock Text="Lowercase letters" VerticalAlignment="Center" Margin="20,0,0,0" Style="{StaticResource textLabel}"/>
-        </StackPanel>
         
-        <StackPanel Orientation="Horizontal" Grid.Row="2">
-            <local:ToggleButton Height="30" Toggled="{Binding Path=Settings.UpperCaseLettersActive}"/>
-            <TextBlock Text="Uppercase letters" VerticalAlignment="Center" Margin="20,0,0,0" Style="{StaticResource textLabel}"/>
-        </StackPanel>
-
-        <StackPanel Orientation="Horizontal" Grid.Row="3">
-            <local:ToggleButton Height="30" Toggled="{Binding Path=Settings.NumbersActive}"/>
-            <TextBlock Text="Numbers" VerticalAlignment="Center" Margin="20,0,0,0" Style="{StaticResource textLabel}"/>
-        </StackPanel>
+        <local:ToggleButton Toggled="{Binding Path=Settings.LowerCaseLettersActive}" Grid.Row="1" />
+        <TextBlock Text="Lowercase letters" VerticalAlignment="Center" Margin="20,0,0,0" Style="{StaticResource textLabel}" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" />
         
-        <StackPanel Orientation="Horizontal" Grid.Row="4">
-            <local:ToggleButton Height="30" Toggled="{Binding Path=Settings.ExclamationMarkActive}"/>
-            <TextBlock Text="Exclamation mark" VerticalAlignment="Center" Margin="20,0,0,0" Style="{StaticResource textLabel}"/>
-        </StackPanel>
+        
+        <local:ToggleButton Toggled="{Binding Path=Settings.UpperCaseLettersActive}" Grid.Row="2"/>
+        <TextBlock Text="Uppercase letters" VerticalAlignment="Center" Margin="20,0,0,0" Style="{StaticResource textLabel}" Grid.Row="2" Grid.Column="1"/>
+        
 
-        <StackPanel Orientation="Horizontal" Grid.Row="5">
-            <local:ToggleButton Height="30" Toggled="{Binding Path=Settings.SpecialLettersActive}"/>
-            <TextBlock Text="Special letters (:;#+-_/)" VerticalAlignment="Center" Margin="20,0,0,0" Style="{StaticResource textLabel}"/>
-        </StackPanel>
+        <local:ToggleButton Toggled="{Binding Path=Settings.NumbersActive}" Grid.Row="3"/>
+        <TextBlock Text="Numbers" VerticalAlignment="Center" Margin="20,0,0,0" Style="{StaticResource textLabel}" Grid.Row="3" Grid.Column="1"/>
 
-        <StackPanel Orientation="Horizontal" Grid.Row="6">
-            <local:ToggleButton Height="30" Toggled="{Binding Path=Settings.SpacesActive}"/>
-            <TextBlock Text="Spaces" VerticalAlignment="Center" Margin="20,0,0,0" Style="{StaticResource textLabel}"/>
-        </StackPanel>
+
+
+        <local:ToggleButton Toggled="{Binding Path=Settings.ExclamationMarkActive}" Grid.Row="4"/>
+        <TextBlock Text="Exclamation mark" VerticalAlignment="Center" Margin="20,0,0,0" Style="{StaticResource textLabel}" Grid.Row="4" Grid.Column="1"/>
+        
+        <local:ToggleButton Toggled="{Binding Path=Settings.SpecialLettersActive}" Grid.Row="5"/>
+        <TextBlock Text="Special letters (:;#+-_/)" VerticalAlignment="Center" Margin="20,0,0,0" Style="{StaticResource textLabel}" Grid.Row="5" Grid.Column="1"/>
+        
+
+
+        <local:ToggleButton Toggled="{Binding Path=Settings.SpacesActive}" Grid.Row="6"/>
+        <TextBlock Text="Spaces" VerticalAlignment="Center" Margin="20,0,0,0" Style="{StaticResource textLabel}" Grid.Row="6" Grid.Column="1"/>
+     
 
     </Grid>
 </UserControl>

@@ -50,9 +50,7 @@
             </Setter.Value>
         </Setter>
         
-        
-        
-        
+ 
         <Style.Triggers>
             <EventTrigger RoutedEvent="MouseEnter">
                 <EventTrigger.Actions>
