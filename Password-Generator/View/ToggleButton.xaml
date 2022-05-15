@@ -55,7 +55,6 @@
                                 <Setter Property="Fill" Value="#605580" />
                             </DataTrigger>
                             <DataTrigger Binding="{Binding ElementName=ToggleButtonWindow, Path=Toggled}" Value="true">
-                                <!--<Setter Property="Margin" Value="0, 0, -39, 0" />-->
                                 <DataTrigger.EnterActions>
                                     <BeginStoryboard>
                                         <Storyboard>

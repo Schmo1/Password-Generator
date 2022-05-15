@@ -52,28 +52,28 @@
         </Grid.RowDefinitions>
         
         
-        <local:ToggleButton Toggled="{Binding Path=Settings.LowerCaseLettersActive}" Grid.Row="1" />
+        <local:ToggleButton Toggled="{Binding Path=Settings.LowerCaseLettersActive}" Grid.Row="1" ToolTip="Add some lowercase letters" />
         <TextBlock Text="Lowercase letters" VerticalAlignment="Center" Margin="20,0,0,0" Style="{StaticResource textLabel}" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" />
         
         
-        <local:ToggleButton Toggled="{Binding Path=Settings.UpperCaseLettersActive}" Grid.Row="2"/>
+        <local:ToggleButton Toggled="{Binding Path=Settings.UpperCaseLettersActive}" Grid.Row="2" ToolTip="Add some uppercase letters"/>
         <TextBlock Text="Uppercase letters" VerticalAlignment="Center" Margin="20,0,0,0" Style="{StaticResource textLabel}" Grid.Row="2" Grid.Column="1"/>
         
 
-        <local:ToggleButton Toggled="{Binding Path=Settings.NumbersActive}" Grid.Row="3"/>
+        <local:ToggleButton Toggled="{Binding Path=Settings.NumbersActive}" Grid.Row="3" ToolTip="Add some random numbers"/>
         <TextBlock Text="Numbers" VerticalAlignment="Center" Margin="20,0,0,0" Style="{StaticResource textLabel}" Grid.Row="3" Grid.Column="1"/>
 
 
 
-        <local:ToggleButton Toggled="{Binding Path=Settings.ExclamationMarkActive}" Grid.Row="4"/>
+        <local:ToggleButton Toggled="{Binding Path=Settings.ExclamationMarkActive}" Grid.Row="4" ToolTip="Add some exclamation mark"/>
         <TextBlock Text="Exclamation mark" VerticalAlignment="Center" Margin="20,0,0,0" Style="{StaticResource textLabel}" Grid.Row="4" Grid.Column="1"/>
         
-        <local:ToggleButton Toggled="{Binding Path=Settings.SpecialLettersActive}" Grid.Row="5"/>
+        <local:ToggleButton Toggled="{Binding Path=Settings.SpecialLettersActive}" Grid.Row="5" ToolTip="Add some special letters"/>
         <TextBlock Text="Special letters (:;#+-_/)" VerticalAlignment="Center" Margin="20,0,0,0" Style="{StaticResource textLabel}" Grid.Row="5" Grid.Column="1"/>
         
 
 
-        <local:ToggleButton Toggled="{Binding Path=Settings.SpacesActive}" Grid.Row="6"/>
+        <local:ToggleButton Toggled="{Binding Path=Settings.SpacesActive}" Grid.Row="6" ToolTip="Add some spaces"/>
         <TextBlock Text="Spaces" VerticalAlignment="Center" Margin="20,0,0,0" Style="{StaticResource textLabel}" Grid.Row="6" Grid.Column="1"/>
      
 

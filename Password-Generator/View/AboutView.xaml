@@ -15,7 +15,7 @@
         </Grid.RowDefinitions>
 
         <StackPanel Orientation="Horizontal">
-            <fa:ImageAwesome Icon="Wrench" Foreground="White" Width="70" Margin="10,20,10,0"/>
+            <fa:ImageAwesome Icon="Wrench" Foreground="White" Width="70" Margin="10,20,10,0" ToolTip="Password-Generator"/>
             <StackPanel Grid.Column="1">
                 <TextBlock Text="{Binding ApplicationName}" Style="{StaticResource textLabel}" Margin="10,30,0,0" />
                 <TextBlock Text="{Binding VersionNumber}" Style="{StaticResource textLabel}" Margin="10,7,0,0" FontSize="12"/>
