@@ -11,7 +11,7 @@ Features include:
 ## Screenshots
 
 <div align="center">
-    <img alt="Setup" src="./screenshots/Home.png">
+    <img alt="Setup" src="./Password-Generator/screenshots/Home.png">
 	<img alt="Setup" src="./screenshots/Settings.png">
 	<img alt="Setup" src="./screenshots/About.png">
 </div>
