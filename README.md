@@ -12,6 +12,6 @@ Features include:
 
 <div align="center">
     <img alt="Setup" src="./Password-Generator/screenshots/Home.png">
-	<img alt="Setup" src="./screenshots/Settings.png">
-	<img alt="Setup" src="./screenshots/About.png">
+	<img alt="Setup" src="./Password-Generator/screenshots/Settings.png">
+	<img alt="Setup" src="./Password-Generator/screenshots/About.png">
 </div>
