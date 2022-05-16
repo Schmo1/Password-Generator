@@ -32,8 +32,10 @@ namespace Password_Generator.Generator
         public int MinPWLength { get => minPWLenght; }
         public int MaxPWLength { get => maxPWLenght; }
 
+
         Notifier notifier = new Notifier(cfg =>
         {
+            
             cfg.PositionProvider = new WindowPositionProvider(
                 parentWindow: Application.Current.MainWindow,
                 corner: Corner.TopRight,
@@ -61,22 +63,26 @@ namespace Password_Generator.Generator
 
         public void CheckSetSettingsValid()
         {
+            //No settings are selected
             if (!LowerCaseLettersActive && !UpperCaseLettersActive && !NumbersActive && 
                 !SpacesActive && !ExclamationMarkActive && !SpecialLettersActive)
             {
                 SetDefault();
             }
+            //Only Spaces are active
             else if (!LowerCaseLettersActive & !UpperCaseLettersActive & !
                 NumbersActive && SpacesActive & !ExclamationMarkActive & !
                 SpecialLettersActive)
+            {
                 SetDefault();
-
+            }        
         }
+
         private void SetDefault()
         {
-
-
-            notifier.ShowWarning("Changed settings to default because of wrong user settings.");
+            //Show some error only when main is activ
+            if (Application.Current.MainWindow != null && Application.Current.MainWindow.Visibility == Visibility.Visible)
+                notifier.ShowWarning("Changed settings to default because of wrong user settings.");
 
             //Set Default Values
             LowerCaseLettersActive = UpperCaseLettersActive = NumbersActive = true;

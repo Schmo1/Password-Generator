@@ -19,7 +19,7 @@ namespace Password_Generator.Generator
 
 
 
-
+        //Constructors
         public ListOfGeneratorLetters()
         {
             GenerateDefaultSettings();
@@ -31,11 +31,11 @@ namespace Password_Generator.Generator
         }
 
 
+        //Return all Chars as string.
         public string GetConfiguratedString()
         {
 
             UpdateList();
-
 
             string returnStr = "";
             foreach (string str in this)
@@ -67,8 +67,10 @@ namespace Password_Generator.Generator
 
         private void UpdateList()
         {
+            //Clear list
             Clear();
 
+            //Check Settings valid. Settings changed the values to default if they are wrong
             _settings.CheckSetSettingsValid();
 
 

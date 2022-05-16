@@ -10,6 +10,7 @@ namespace Password_Generator.Generator
         private static ListOfGeneratorLetters _letters = new ListOfGeneratorLetters();
         private Random random;
 
+        //max allowed loops
         private const int maxLoops = 5000;
 
         private RandomStringGenerator()
@@ -49,7 +50,7 @@ namespace Password_Generator.Generator
                }
             }while(loops < maxLoops &! ValidString(randomString, generatorSettings));
              
-
+            //Check max loops
             if (loops >= maxLoops)
                 return "Try Again!";
 
@@ -59,7 +60,7 @@ namespace Password_Generator.Generator
 
         private bool ValidString(string str, GeneratorSettings generatorSettings)
         {
-            
+            //Check if password contains the adjusted settings
             if (generatorSettings.LowerCaseLettersActive)
             {
                 if (!ContainsSomeChar(str, _letters.LowerLetters.ToCharArray()))
@@ -96,15 +97,17 @@ namespace Password_Generator.Generator
                     return false;
             }
 
-
+            //password is valid
             return true;
         }
 
         private bool ContainsSomeChar(string str, char[] charList)
         {
+            //Method checks if string Contains some Char from a array
             foreach (char ch in charList)
             {
                 if(str.Contains(ch.ToString()))
+                    //Contains some char
                     return true;
             }
             return false;
