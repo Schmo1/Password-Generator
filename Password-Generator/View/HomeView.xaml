@@ -109,8 +109,10 @@
                 <TextBlock Text="{Binding PWLenght}"  Foreground="White" HorizontalAlignment="Center" FontSize="15"/>
             </StackPanel>
 
-            <Slider Style="{StaticResource Horizontal_Slider}" VerticalAlignment="Center"  Grid.ColumnSpan="2" ToolTip="Set`s the length of the password"
-                    Value="{Binding PWLenght}" Minimum="{Binding PWLenghtMin}" Maximum="{Binding PWLenghtMax}" Margin="40,10,40,20" >
+            <Slider Style="{StaticResource Horizontal_Slider}" VerticalAlignment="Center"  Grid.ColumnSpan="2" 
+                    ToolTip="Set`s the length of the password"
+                    Value="{Binding PWLenght}" Minimum="{Binding PWLenghtMin}" Maximum="{Binding PWLenghtMax}" 
+                    Margin="40,10,40,20" IsMoveToPointEnabled="True">
             </Slider>
 
         </StackPanel>
