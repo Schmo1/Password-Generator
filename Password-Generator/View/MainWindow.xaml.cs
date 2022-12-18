@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 
-namespace Password_Generator
+namespace Password_Generator.View
 {
     /// <summary>
     /// Interaktionslogik für MainWindow.xaml

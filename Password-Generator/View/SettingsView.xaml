@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Password_Generator.View"
+             xmlns:strings="clr-namespace:Password_Generator.Resources.SettingsView"
              mc:Ignorable="d" 
              d:DesignHeight="350" d:DesignWidth="300">
 
@@ -53,23 +54,23 @@
         
         
         <local:ToggleButton Toggled="{Binding Path=Settings.LowerCaseLettersActive}" Grid.Row="1" ToolTip="Add some lowercase letters" />
-        <TextBlock Text="Lowercase letters" VerticalAlignment="Center" Margin="20,0,0,0" Style="{StaticResource textLabel}" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" />
+        <TextBlock Text="{x:Static strings:SettingsViewStrings.lowercaseLetters}" VerticalAlignment="Center" Margin="20,0,0,0" Style="{StaticResource textLabel}" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" />
         
         
         <local:ToggleButton Toggled="{Binding Path=Settings.UpperCaseLettersActive}" Grid.Row="2" ToolTip="Add some uppercase letters"/>
-        <TextBlock Text="Uppercase letters" VerticalAlignment="Center" Margin="20,0,0,0" Style="{StaticResource textLabel}" Grid.Row="2" Grid.Column="1"/>
+        <TextBlock Text="{x:Static strings:SettingsViewStrings.uppercaseLetters}" VerticalAlignment="Center" Margin="20,0,0,0" Style="{StaticResource textLabel}" Grid.Row="2" Grid.Column="1"/>
         
 
         <local:ToggleButton Toggled="{Binding Path=Settings.NumbersActive}" Grid.Row="3" ToolTip="Add some random numbers"/>
-        <TextBlock Text="Numbers" VerticalAlignment="Center" Margin="20,0,0,0" Style="{StaticResource textLabel}" Grid.Row="3" Grid.Column="1"/>
+        <TextBlock Text="{x:Static strings:SettingsViewStrings.numbers}" VerticalAlignment="Center" Margin="20,0,0,0" Style="{StaticResource textLabel}" Grid.Row="3" Grid.Column="1"/>
 
 
 
         <local:ToggleButton Toggled="{Binding Path=Settings.ExclamationMarkActive}" Grid.Row="4" ToolTip="Add some exclamation mark"/>
-        <TextBlock Text="Exclamation mark" VerticalAlignment="Center" Margin="20,0,0,0" Style="{StaticResource textLabel}" Grid.Row="4" Grid.Column="1"/>
+        <TextBlock Text="{x:Static strings:SettingsViewStrings.marks}" VerticalAlignment="Center" Margin="20,0,0,0" Style="{StaticResource textLabel}" Grid.Row="4" Grid.Column="1"/>
         
         <local:ToggleButton Toggled="{Binding Path=Settings.SpecialLettersActive}" Grid.Row="5" ToolTip="Add some special letters"/>
-        <TextBlock Text="Special letters (:;#+-_/)" VerticalAlignment="Center" Margin="20,0,0,0" Style="{StaticResource textLabel}" Grid.Row="5" Grid.Column="1"/>
+        <TextBlock Text="{x:Static strings:SettingsViewStrings.specialLetters}" VerticalAlignment="Center" Margin="20,0,0,0" Style="{StaticResource textLabel}" Grid.Row="5" Grid.Column="1"/>
         
 
 

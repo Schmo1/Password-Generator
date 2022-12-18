@@ -117,4 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="lowercaseLetters" xml:space="preserve">
+    <value>Lowercase letters</value>
+  </data>
+  <data name="marks" xml:space="preserve">
+    <value>Exclamation, interrogation marks</value>
+  </data>
+  <data name="numbers" xml:space="preserve">
+    <value>Numbers</value>
+  </data>
+  <data name="spaces" xml:space="preserve">
+    <value>Spaces</value>
+  </data>
+  <data name="specialLetters" xml:space="preserve">
+    <value>Special letters (:;#+-_/)</value>
+  </data>
+  <data name="uppercaseLetters" xml:space="preserve">
+    <value>Uppercase letters</value>
+  </data>
 </root>

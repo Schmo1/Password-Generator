@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:Password_Generator"
              xmlns:viewModel="clr-namespace:Password_Generator.ViewModel"
              xmlns:view="clr-namespace:Password_Generator.View"
-             StartupUri="MainWindow.xaml">
+             StartupUri="View/MainWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
