@@ -75,7 +75,7 @@
 
 
         <local:ToggleButton Toggled="{Binding Path=Settings.SpacesActive}" Grid.Row="6" ToolTip="Add some spaces"/>
-        <TextBlock Text="Spaces" VerticalAlignment="Center" Margin="20,0,0,0" Style="{StaticResource textLabel}" Grid.Row="6" Grid.Column="1"/>
+        <TextBlock Text="{x:Static strings:SettingsViewStrings.spaces}" VerticalAlignment="Center" Margin="20,0,0,0" Style="{StaticResource textLabel}" Grid.Row="6" Grid.Column="1"/>
      
 
     </Grid>
