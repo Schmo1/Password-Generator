@@ -38,10 +38,6 @@ namespace Password_Generator.ViewModel
             CreateViewModels();
             CurrentView = HomeVM;
 
-            string test = System.Threading.Thread.CurrentThread.CurrentUICulture.EnglishName;
-            string test2 = System.Threading.Thread.CurrentThread.CurrentCulture.EnglishName;
-
-            System.Threading.Thread.CurrentThread.CurrentUICulture = System.Threading.Thread.CurrentThread.CurrentCulture;
         }
 
 

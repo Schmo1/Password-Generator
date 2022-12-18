@@ -10,7 +10,7 @@
         mc:Ignorable="d"
         Title="Password-Generator" MinWidth="490" MaxWidth="750" MinHeight="400" Height="400" Width="550" 
         WindowStartupLocation="CenterScreen" AllowsTransparency="True"  
-        Background="Transparent" WindowStyle="None">
+        Background="Transparent" WindowStyle="None" >
 
     <Window.DataContext>
         <viewModel:MainViewModel/>
