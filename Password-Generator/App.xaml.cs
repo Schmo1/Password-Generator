@@ -7,5 +7,6 @@ namespace Password_Generator
     /// </summary>
     public partial class App : Application
     {
+                
     }
 }
